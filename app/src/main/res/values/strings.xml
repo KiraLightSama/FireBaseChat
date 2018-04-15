@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">FireBaseChat</string>
+    <string name="todo">TODO</string>
+    <string name="escriba_el_mensaje">Escriba el mensaje…</string>
+    <string name="enviar">Enviar</string>
+    <string name="_00_00">00:00</string>
+    <string name="hola_bienvenido">Hola bienvenido</string>
+    <string name="kevin">Kevin</string>
+    <string name="title_activity_registro">RegistroActivity</string>
 </resources>

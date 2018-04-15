@@ -6,27 +6,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5sp"
-    tools:context="com.example.kira.firebasechat.MainActivity">
+    tools:context="com.example.kira.firebasechat.Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fotoPerfil"
             android:layout_width="48sp"
             android:layout_height="48sp"
             android:src="@mipmap/ic_launcher"
-            android:contentDescription="TODO"/>
-
+            android:contentDescription="@string/todo"/>
         <TextView
+            android:id="@+id/nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Kevin" />
+            android:text="@string/kevin" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end|center">
+            <ImageView
+                android:id="@+id/btnSalir"
+                android:layout_width="48sp"
+                android:layout_height="48sp"
+                android:src="@drawable/ic_action_name"/>
+        </LinearLayout>
+
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvMensajes"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
@@ -38,17 +52,24 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
+        <ImageButton
+            android:id="@+id/enviarFoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_menu_gallery"
+            android:layout_gravity="center"/>
         <EditText
+            android:id="@+id/txtMensaje"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Escriba el mensaje..."
+            android:hint="@string/escriba_el_mensaje"
             android:inputType="text" />
-
-        <Button
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnEnviar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enviar" />
+            android:src="@drawable/ic_send"/>
     </LinearLayout>
 
 </LinearLayout>
